@@ -4,6 +4,7 @@ import { ProjectData } from '../data/projectsData';
 interface ProjectCardProps {
   project: ProjectData;
   animate?: boolean; 
+  className: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, animate }) => {

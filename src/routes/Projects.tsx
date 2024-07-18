@@ -107,7 +107,7 @@ const Projects: React.FC = () => {
           <ProjectCard
             key={project.id}
             project={project}
-            animate={animateCards[project.id]} // Pass animate state for each project
+            animate={animateCards[project.id]} 
             className={animateCards[project.id] ? 'animate-slide-in' : 'hidden'}
           />
         ))}
