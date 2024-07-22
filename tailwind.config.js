@@ -18,6 +18,9 @@ const config = {
         '0': '0',
         '100': '1',
       },
+      transitionProperty: {
+        'opacity-transform': 'opacity, transform',
+      },
   },
   plugins: [],
 }};
