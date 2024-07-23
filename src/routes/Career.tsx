@@ -17,7 +17,7 @@ function Career() {
                     I am driven to deliver the best every time, and love collaborating and helping others to develop alongisde me. My ability to understand both the big picture and the finer details makes me a valuable asset to any team. I have a proven track record of effectively communicating the story of a project to executives, senior stakeholders and investors.
                 </p>
                 <p className="mb-3">
-                    For more details on my career journey so far, please download my CV. If you'd like to get in contact about a project or role you would like to engage me on, please click Hire Me below.
+                    For more details on my career journey so far, please download my CV. If you&apos;d like to get in contact about a project or role you would like to engage me on, please click Hire Me below.
                 </p>
                 <div className="flex justify-center space-x-4 mt-6">
                     <Link to="/hire" className="bg-airblue text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">

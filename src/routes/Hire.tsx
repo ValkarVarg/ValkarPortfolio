@@ -4,6 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import emailjs from 'emailjs-com'; 
 
+interface EmailJSError {
+    text: string;
+}
+
 function Hire() {
     const [formData, setFormData] = useState({
         name: '',
@@ -34,7 +38,7 @@ function Hire() {
                     company: '',
                     message: '',
                 });
-            }, (error) => {
+            }, (error: EmailJSError) => {
                 console.log(error.text);
                 setFormStatus('There was an error sending your message. Please try again.');
             });

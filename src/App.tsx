@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Home from './routes/Home';
 import Career from './routes/Career';
@@ -9,7 +8,7 @@ import Hire from './routes/Hire';
 import './index.css';
 import './tailwind.css';
 
-const App = () => {
+const App: React.FC = () => {
   const location = useLocation();
 
   return (
@@ -28,15 +27,4 @@ const App = () => {
   );
 };
 
-const rootElement = document.getElementById('root');
-
-if (rootElement) {
-  const root = ReactDOM.createRoot(rootElement);
-  root.render(
-    <React.StrictMode>
-      <Router>
-        <App />
-      </Router>
-    </React.StrictMode>
-  );
-}
+export default App;

@@ -4,9 +4,10 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faBriefcase, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
 import MikeImage from '../assets/Mike.jpg';
 import { Link } from 'react-router-dom';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 interface HoverButtonProps {
-  icon: any;
+  icon: IconDefinition;
   label: string;
   side: 'left' | 'right';
   color: string;

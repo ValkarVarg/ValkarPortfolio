@@ -9,10 +9,10 @@ const Projects: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [searchTerms, setSearchTerms] = useState<string[]>([]);
   const [filteredProjects, setFilteredProjects] = useState<ProjectData[]>(projects);
-  const [animateCards, setAnimateCards] = useState<{ [key: number]: boolean }>({});
+  const [animateCards, setAnimateCards] = useState<Record<number, boolean>>({});
 
   useEffect(() => {
-    const initialAnimateState = projects.reduce<{ [key: number]: boolean }>((acc, project) => {
+    const initialAnimateState = projects.reduce<Record<number, boolean>>((acc, project) => {
       acc[project.id] = false;
       return acc;
     }, {});
@@ -30,7 +30,9 @@ const Projects: React.FC = () => {
     });
 
     return () => {
-      animationTimeouts.forEach(timeout => clearTimeout(timeout));
+      animationTimeouts.forEach(timeout => {
+        clearTimeout(timeout);
+      });
     };
   }, [filteredProjects]);
 
@@ -76,7 +78,7 @@ const Projects: React.FC = () => {
 
   return (
     <div className="bg-licorice min-h-screen p-4 text-slate-100">
-<div className="flex items-center mb-4">
+      <div className="flex items-center mb-4">
         <Link to="/" className="inline-block text-slate-100 hover:text-airblue">
           <FontAwesomeIcon icon={faArrowLeft} size="2x" />
         </Link>
@@ -98,7 +100,9 @@ const Projects: React.FC = () => {
         {searchTerms.map(term => (
           <div key={term} className="bg-paynegrey text-slate-100 border border-slate-900 rounded-full px-4 py-1 m-1 flex items-center">
             <span>{term}</span>
-            <button onClick={() => removeSearchTerm(term)} className="ml-2 text-airblue">&times;</button>
+            <button onClick={() => {
+              removeSearchTerm(term);
+            }} className="ml-2 text-airblue">&times;</button>
           </div>
         ))}
       </div>
