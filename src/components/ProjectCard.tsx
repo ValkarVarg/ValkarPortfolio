@@ -3,10 +3,16 @@ import { ProjectData } from '../data/projectsData';
 
 import ncimg from "../assets/stepex-northcoders-1.jpg";
 import gymbro from "../assets/GYMBROHERO.jpg";
+import goal from "../assets/goal.png"
+import snake from "../assets/snake.png"
+import flashCard from "../assets/flashCard.png"
 
 const imageMap: Record<string, string> = {
   'ncimg': ncimg,
   'gymbro': gymbro,
+  'goal': goal,
+  'snake': snake,
+  'flashCard': flashCard
 };
 
 interface ProjectCardProps {
