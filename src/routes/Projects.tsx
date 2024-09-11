@@ -8,7 +8,7 @@ import ProjectCard from '../components/ProjectCard';
 const Projects: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [searchTerms, setSearchTerms] = useState<string[]>([]);
-  const [filteredProjects, setFilteredProjects] = useState<ProjectData[]>(projects);
+  const [filteredProjects, setFilteredProjects] = useState<ProjectData[]>([...projects].reverse());
   const [animateCards, setAnimateCards] = useState<Record<number, boolean>>({});
 
   useEffect(() => {
@@ -48,14 +48,14 @@ const Projects: React.FC = () => {
 
   const filterProjects = (terms: string[]) => {
     if (terms.length === 0) {
-      setFilteredProjects(projects);
+      setFilteredProjects([...projects].reverse());
     } else {
       const filtered = projects.filter(project =>
         terms.every(term =>
           project.techStack.some(tech => tech.toLowerCase().includes(term))
         )
       );
-      setFilteredProjects(filtered);
+      setFilteredProjects([...filtered].reverse());
     }
   };
 
@@ -77,7 +77,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <div className="bg-licorice min-h-screen p-4 text-slate-100">
+    <div className="bg-licorice min-h-screen flex flex-col p-4 text-slate-100">
       <div className="flex items-center mb-4">
         <Link to="/" className="inline-block text-slate-100 hover:text-airblue">
           <FontAwesomeIcon icon={faArrowLeft} size="2x" />
@@ -106,7 +106,7 @@ const Projects: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="flex-grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredProjects.map(project => (
           <ProjectCard
             key={project.id}

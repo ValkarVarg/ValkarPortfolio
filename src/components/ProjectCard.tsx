@@ -6,13 +6,15 @@ import gymbro from "../assets/GYMBROHERO.jpg";
 import goal from "../assets/goal.png"
 import snake from "../assets/snake.png"
 import flashCard from "../assets/flashCard.png"
+import dice from "../assets/dice.png"
 
 const imageMap: Record<string, string> = {
   'ncimg': ncimg,
   'gymbro': gymbro,
   'goal': goal,
   'snake': snake,
-  'flashCard': flashCard
+  'flashCard': flashCard,
+  'dice': dice
 };
 
 interface ProjectCardProps {

@@ -51,5 +51,12 @@ export interface ProjectData {
     techStack: ["Python", "TKinter"],
     link: "https://github.com/ValkarVarg/Flash-card-app",
     image: "flashCard"
+  },
+  {id: 7,
+    name: "Guess the Number Game",
+    description: "A react native app where the app tries to guess the number you have chosen. Utilises reactive rendering and device specific styling to better suit android/ios and differing device sizes",
+    techStack: ["React Native", "TypeScript", "JavaScript", "Expo"],
+    link: "https://github.com/ValkarVarg/guess-the-number",
+    image: "dice"
   }
   ];
