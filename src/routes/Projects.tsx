@@ -77,7 +77,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-<div className="container mx-auto px-4 bg-licorice min-h-screen flex flex-col p-4 text-slate-100">
+<div className="w-full px-4 bg-licorice min-h-screen flex flex-col p-4 text-slate-100">
   <div className="flex items-center mb-4">
     <Link to="/" className="inline-block text-slate-100 hover:text-airblue">
       <FontAwesomeIcon icon={faArrowLeft} size="2x" />
