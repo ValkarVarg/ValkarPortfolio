@@ -7,6 +7,8 @@ import goal from "../assets/goal.png"
 import snake from "../assets/snake.png"
 import flashCard from "../assets/flashCard.png"
 import dice from "../assets/dice.png"
+import quiz from "../assets/quiz.jpg"
+import shopping from "../assets/shopping.png"
 
 const imageMap: Record<string, string> = {
   'ncimg': ncimg,
@@ -14,7 +16,9 @@ const imageMap: Record<string, string> = {
   'goal': goal,
   'snake': snake,
   'flashCard': flashCard,
-  'dice': dice
+  'dice': dice,
+  'quiz': quiz,
+  'shopping': shopping
 };
 
 interface ProjectCardProps {
@@ -48,7 +52,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, animate, className =
         <img
           src={imageSrc}
           alt={project.name}
-          className="w-24 h-24 object-cover rounded-lg ml-4"
+          className="w-24 h-24 object-contain rounded-lg ml-4"
         />
       )}
     </a>

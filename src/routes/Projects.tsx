@@ -77,46 +77,48 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <div className="bg-licorice min-h-screen flex flex-col p-4 text-slate-100">
-      <div className="flex items-center mb-4">
-        <Link to="/" className="inline-block text-slate-100 hover:text-airblue">
-          <FontAwesomeIcon icon={faArrowLeft} size="2x" />
-        </Link>
-        <h2 className="font-bold text-2xl flex-1 text-center">Projects</h2>
+<div className="container mx-auto px-4 bg-licorice min-h-screen flex flex-col p-4 text-slate-100">
+  <div className="flex items-center mb-4">
+    <Link to="/" className="inline-block text-slate-100 hover:text-airblue">
+      <FontAwesomeIcon icon={faArrowLeft} size="2x" />
+    </Link>
+    <h2 className="font-bold text-2xl flex-1 text-center">Projects</h2>
+  </div>
+  
+  <div className="flex mb-4">
+    <input
+      type="text"
+      value={searchTerm}
+      onChange={handleSearch}
+      onKeyDown={handleKeyDown}
+      placeholder="Search by tech stack..."
+      className="pl-2 rounded bg-paynegrey text-slate-100 border border-slate-900 w-full max-w-md mr-2"
+    />
+    <button onClick={addSearchTerm} className="bg-airblue text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">Add</button>
+  </div>
+
+  <div className="mb-4 flex flex-wrap">
+    {searchTerms.map(term => (
+      <div key={term} className="bg-paynegrey text-slate-100 border border-slate-900 rounded-full px-4 py-1 m-1 flex items-center">
+        <span>{term}</span>
+        <button onClick={() => {
+          removeSearchTerm(term);
+        }} className="ml-2 text-airblue">&times;</button>
       </div>
-      
-      <div className="flex mb-4">
-        <input
-          type="text"
-          value={searchTerm}
-          onChange={handleSearch}
-          onKeyDown={handleKeyDown}
-          placeholder="Search by tech stack..."
-          className="pl-2 rounded bg-paynegrey text-slate-100 border border-slate-900 w-full max-w-md mr-2"
-        />
-        <button onClick={addSearchTerm} className="bg-airblue text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">Add</button>
-      </div>
-      <div className="mb-4 flex flex-wrap">
-        {searchTerms.map(term => (
-          <div key={term} className="bg-paynegrey text-slate-100 border border-slate-900 rounded-full px-4 py-1 m-1 flex items-center">
-            <span>{term}</span>
-            <button onClick={() => {
-              removeSearchTerm(term);
-            }} className="ml-2 text-airblue">&times;</button>
-          </div>
-        ))}
-      </div>
-      <div className="flex-grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {filteredProjects.map(project => (
-          <ProjectCard
-            key={project.id}
-            project={project}
-            animate={animateCards[project.id]} 
-            className={animateCards[project.id] ? 'animate-slide-in' : 'hidden'}
-          />
-        ))}
-      </div>
-    </div>
+    ))}
+  </div>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    {filteredProjects.map(project => (
+      <ProjectCard
+        key={project.id}
+        project={project}
+        animate={animateCards[project.id]} 
+        className={animateCards[project.id] ? 'animate-slide-in' : 'hidden'}
+      />
+    ))}
+  </div>
+</div>
   );
 };
 

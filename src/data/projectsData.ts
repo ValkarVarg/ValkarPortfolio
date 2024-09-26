@@ -58,5 +58,19 @@ export interface ProjectData {
     techStack: ["React Native", "TypeScript", "JavaScript", "Expo"],
     link: "https://github.com/ValkarVarg/guess-the-number",
     image: "dice"
+  },
+  {id: 8,
+    name: "Quizzler App",
+    description: "A python based quiz app that uses an online API to generate 10 question quizzes, uses a GUI to present and give feedback",
+    techStack: ["Python", "TKinter"],
+    link: "https://github.com/ValkarVarg/quizzler-app",
+    image: "quiz"
+  },
+  {id: 9,
+    name: "Shopping Cart",
+    description: "A recreation of a shopping app, allowing for products to be added and removed from a users cart, the quantity can be changed and the user can checkout.",
+    techStack: ["React Native", "TypeScript", "Expo", "PSQL"],
+    link: "https://github.com/AlexStraton/shopping_cart_app",
+    image: "shopping"
   }
   ];

@@ -18,7 +18,7 @@ interface HoverButtonProps {
 function Home() {
   return (
     <div className="bg-licorice min-h-screen font-sans text-slate-50 flex flex-col items-center justify-center px-4 md:px-0">
-      <h1 className="font-bold text-3xl lg:text-2xl mb-4">Mike Williams</h1>
+      <h1 className="font-bold text-3xl mb-4">Mike Williams</h1>
       <div className="flex items-center justify-center mb-4">
         <div className="flex flex-col space-y-8 lg:space-y-6">
           <HoverButton icon={faBriefcase} label="My Career" side="left" color="text-cream" to="/career" />
@@ -28,17 +28,17 @@ function Home() {
           <img
             src={MikeImage}
             alt="Mike Williams"
-            className="w-40 h-40 lg:w-32 lg:h-32 rounded-full"
+            className="w-40 h-40 lg:w-50 lg:h-50 rounded-full"
           />
         </div>
-        <div className="flex flex-col space-y-8 lg:space-y-6">
+        <div className="flex flex-col space-y-8 lg:space-y-9">
           <HoverButton icon={faLinkedin} label="LinkedIn" side="right" color="text-cream" url="https://www.linkedin.com/in/mike-williams-378b7326/" />
           <HoverButton icon={faGithub} label="Github" side="right" color="text-cream" url="https://github.com/ValkarVarg" />
         </div>
       </div>
-      <p className="mt-4 lg:text-sm">Full-Stack Developer / Project Manager</p>
+      <p className="mt-4">Full-Stack Developer / Project Manager</p>
 
-      <Link to="/hire" className="mt-4 bg-transparent hover:bg-airblue text-white font-semibold py-2 px-4 lg:py-2 lg:px-3 border border-white rounded-lg transition duration-300">
+      <Link to="/hire" className="mt-4 bg-transparent hover:bg-airblue text-white font-semibold py-2 px-4 lg:px-5 border border-white rounded-lg transition duration-300">
         Hire Me
       </Link>
     </div>
@@ -48,11 +48,11 @@ function Home() {
 const HoverButton: React.FC<HoverButtonProps> = ({ icon, label, side, color, to, url }) => (
   <div className="relative flex items-center group">
     {to ? (
-      <Link to={to} className={`text-2xl lg:text-xl cursor-pointer ${color}`}>
+      <Link to={to} className={`text-2xl cursor-pointer ${color}`}>
         <FontAwesomeIcon icon={icon} />
       </Link>
     ) : (
-      <a href={url} target="_blank" rel="noopener noreferrer" className={`text-2xl lg:text-xl cursor-pointer ${color}`}>
+      <a href={url} target="_blank" rel="noopener noreferrer" className={`text-2xl cursor-pointer ${color}`}>
         <FontAwesomeIcon icon={icon} />
       </a>
     )}
