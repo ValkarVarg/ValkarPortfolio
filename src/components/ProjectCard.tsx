@@ -9,6 +9,7 @@ import flashCard from "../assets/flashCard.png"
 import dice from "../assets/dice.png"
 import quiz from "../assets/quiz.jpg"
 import shopping from "../assets/shopping.png"
+import fintegrate from "../assets/fintegrate.png"
 
 const imageMap: Record<string, string> = {
   'ncimg': ncimg,
@@ -18,7 +19,8 @@ const imageMap: Record<string, string> = {
   'flashCard': flashCard,
   'dice': dice,
   'quiz': quiz,
-  'shopping': shopping
+  'shopping': shopping,
+  'fintegrate': fintegrate
 };
 
 interface ProjectCardProps {

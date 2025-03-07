@@ -72,5 +72,12 @@ export interface ProjectData {
     techStack: ["React Native", "TypeScript", "Expo", "PSQL"],
     link: "https://github.com/AlexStraton/shopping_cart_app",
     image: "shopping"
+  },
+  {id: 10,
+    name: "Fintegrate",
+    description: "Fintegrate is a comprehensive software platform specifically designed for financial advisers and paraplanners in the UK. Building new features and developing the capabilities of the website.",
+    techStack: ["Javascript", "TypeScript", "Python", "Django"],
+    link: "https://fintegrate.co.uk/",
+    image: "fintegrate"
   }
   ];
