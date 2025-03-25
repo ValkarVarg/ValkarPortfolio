@@ -23,7 +23,7 @@ function Career() {
                     <Link to="/hire" className="bg-airblue text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
                         Hire Me
                     </Link>
-                    <a href="./public/Mike Williams CV.pdf" download className="bg-airblue text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
+                    <a href="/Mike Williams CV.pdf" download className="bg-airblue text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
                         Download CV
                     </a>
                 </div>
