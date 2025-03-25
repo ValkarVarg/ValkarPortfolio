@@ -11,7 +11,7 @@ function Career() {
             <div className="max-w-3xl mx-auto">
                 <h2 className="text-3xl font-bold mb-3 text-center">Why Hire Me?</h2>
                 <p className="mb-3 lg:mb-6">
-                    With 11 years of project management and PMO experience, I have a proven track record of making projects better and successfully managing from start to finish. Now, I am expanding my skill set by diving into the world of coding. This unique combination of project management expertise and coding knowledge allows me to wrap my arms around the full project and deliver exactly what is needed.
+                    With 11 years of project management and PMO experience, I have a proven track record of making projects better and successfully managing from start to finish. Now, I have expanded my skill set by diving into the world of full stack development. This unique combination of project management expertise and coding knowledge allows me to wrap my arms around the full project and deliver exactly what is needed.
                 </p>
                 <p className="mb-3 lg:mb-6">
                     I am driven to deliver the best every time, and love collaborating and helping others to develop alongisde me. My ability to understand both the big picture and the finer details makes me a valuable asset to any team. I have a proven track record of effectively communicating the story of a project to executives, senior stakeholders and investors.

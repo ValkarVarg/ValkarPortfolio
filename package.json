@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "clean" : "rm -rf src/**/*.js src/**/*.d.ts"
+    "clean": "rm -rf src/**/*.js src/**/*.d.ts"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
